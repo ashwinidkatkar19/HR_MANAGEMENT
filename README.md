@@ -8,35 +8,55 @@ It allows users to create, view, update, and delete departments.
 Departments are marked as active or inactive based on their status.
 
 Features:
+
 - Department creation
+
 - Department listing with edit and delete options
+
 - Department status management
 
 Technologies:
+
 - Django
+
 - Python
+
 - MySQL (for database management)
 
 Installation:
+
 1. Clone the repository
+
 2. Install dependencies using: pip install -r requirements.txt
+
 3. Set up the database
+
 4. Run migrations using: python manage.py migrate
+
 5. Run the server with: python manage.py runserver
 
 Project Structure:
+
 - DepartmentApp/: Contains the main app for department management.
   - models.py: Defines the Department model.
+
   - views.py: Contains views for CRUD operations on departments.
   - urls.py: URL routing for the Department app.
+
   - templates/: HTML templates for the views.
+
 - HRManagement/: Main project folder containing configurations.
+
 - manage.py: Django's script to manage the project.
 
 Usage:
+
 - Navigate to the home page to view a list of departments.
+
 - Click "Create Department" to add a new department.
+
 - Click "Edit" next to a department to update its information.
+
 - Click "Delete" next to a department to mark it as inactive.
 """
 
@@ -56,6 +76,7 @@ Features
 •	Delete Department: Marks a department as inactive instead of deleting it from the database.
 
 Technologies Used
+
 •	Django: Web framework for rapid development and clean, pragmatic design.
 
 •	MySQL: Relational database management system used for storing department data.
@@ -63,7 +84,9 @@ Technologies Used
 •	HTML/CSS: For designing user interfaces.
 
 Project Structure
+
 Copy code
+
 HRManagement/
 ├── DepartmentApp/
 │   ├── migrations/
@@ -84,7 +107,9 @@ HRManagement/
 └── manage.py
 
 Setup Instructions
+
 Prerequisites
+
 •	Python 3.12.5
 
 •	Django 5.1.3
@@ -140,7 +165,9 @@ Application Workflow
 4.	Delete Department: Mark a department as inactive.
 
 Models
+
 Department Model
+
 python
 Copy code
 class Department(models.Model):
