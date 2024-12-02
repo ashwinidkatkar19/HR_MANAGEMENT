@@ -60,9 +60,7 @@ Usage:
 - Click "Delete" next to a department to mark it as inactive.
 """
 
-HR MANAGEMENT System
-
-Overview
+Overview OF MY PROJECT (HR MANAGEMENT System)
 
 The HR MANAGEMENT System is a web-based application built with Django that enables management of employee departments. It allows users to create, update, delete, and list departments within the organization. This project uses Django's powerful ORM (Object-Relational Mapping) to interact with a MySQL database.
 
