@@ -65,6 +65,7 @@ Overview OF MY PROJECT (HR MANAGEMENT System)
 The HR MANAGEMENT System is a web-based application built with Django that enables management of employee departments. It allows users to create, update, delete, and list departments within the organization. This project uses Django's powerful ORM (Object-Relational Mapping) to interact with a MySQL database.
 
 Features
+
 •	Home Page: Displays a list of active departments.
 
 •	Create Department: A form to create a new department.
