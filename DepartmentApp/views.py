@@ -26,20 +26,29 @@ def Deletedepartment(request, dept_id):
     dept.save()
     return redirect('/')
 
-def updateDepartment(request, did):
-    if request.method == "GET":
-        d = Department.objects.filter(dept_id=did) 
-        context = {}
-        context['department'] = d #in case if we use get
-        return render(request,'updatedepartment.html',context)
-    else:
-        dep = Department.objects.filter(dept_id = did)
-        # d is the queryset, on Queryset, we can call update and delete
-        n = request.POST['dept_name']
-        d = request.POST['description']
-        dep.update(dept_name=n, description =d)
-        return redirect('/')
-    
+# def updateDepartment(request, did):
+#     if request.method == "GET":
+#         d = Department.objects.filter(dept_id=did) 
+#         context = {}
+#         context['department'] = d #in case if we use get
+#         return render(request,'updatedepartment.html',context)
+#     else:
+#         dep = Department.objects.filter(dept_id = did)
+#         # d is the queryset, on Queryset, we can call update and delete
+#         n = request.POST['dept_name']
+#         d = request.POST['description']
+#         dep.update(dept_name=n, description =d)
+#         return redirect('/')
+
+def update_department(request, department_id):
+    department = Department.objects.get(id=department_id)
+    if request.method == 'POST':
+        # Handle the form submission and update logic
+        department.dept_name = request.POST['dept_name']
+        department.description = request.POST['description']
+        department.save()
+    return render(request, 'update_department.html', {'department': department})
+
 
 
 
