@@ -41,12 +41,13 @@ def Deletedepartment(request, dept_id):
 #         return redirect('/')
 
 def update_department(request, department_id):
-    department = Department.objects.get(id=department_id)
+    department = get_object_or_404(Department, id=department_id)
+    
     if request.method == 'POST':
-        # Handle the form submission and update logic
-        department.dept_name = request.POST['dept_name']
-        department.description = request.POST['description']
+        department.dept_name = request.POST.get('dept_name')
+        department.description = request.POST.get('description')
         department.save()
+        
     return render(request, 'update_department.html', {'department': department})
 
 
